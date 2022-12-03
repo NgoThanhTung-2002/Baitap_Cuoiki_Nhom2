@@ -64,8 +64,7 @@ public class ActivitySignIn extends AppCompatActivity {
 
         database= new DatabaseHelper(ActivitySignIn.this);
 //        database.deleteAll();
-
-
+//        database.insertTaiKhoan(new Account("quangtrong","123","Thanhno1","vothanh6081@gmail.com","852146552"));
         edtUseName= (EditText) findViewById(R.id.edtUserName);
         edtPassWord= (EditText) findViewById(R.id.edtPassword);
         btnSignIn= (Button) findViewById(R.id.btnSignIn);
@@ -120,7 +119,6 @@ public class ActivitySignIn extends AppCompatActivity {
                 }
             }
         });
-		
         btnSignIn_SignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

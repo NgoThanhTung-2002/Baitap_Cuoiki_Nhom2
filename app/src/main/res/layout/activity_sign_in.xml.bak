@@ -7,7 +7,6 @@
     android:background="#000000"
     android:orientation="vertical"
     tools:context="NhomTTPTT.example.BaiTapCuoiKi.ActivitySignIn">
-	
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="200dp"
