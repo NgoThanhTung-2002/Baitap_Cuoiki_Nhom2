@@ -5,10 +5,11 @@ import java.util.Random;
 
 public class RandomStringExmple {
     public  String RanDomString() {
+
+
         String upperAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         String lowerAlphabet = "abcdefghijklmnopqrstuvwxyz";
         String numbers = "0123456789";
-
         // combine all strings
         String alphaNumeric = upperAlphabet + lowerAlphabet + numbers;
 
