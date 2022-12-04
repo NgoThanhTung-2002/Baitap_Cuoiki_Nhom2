@@ -1,17 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:gravity="center"
     android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context="NhomTTPTT.example.BaiTapCuoiKi.menu.ActivityShare">
-    <TextView
+    <EditText
+        android:id="@+id/txt_share"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:hint="Nhập nội dung cần chia sẻ"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnShare"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Share"
-        android:textSize="40sp"
-        android:textStyle="bold"/>
+        android:layout_marginTop="40dp"
+        android:text="Chia sẻ ngay"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:background="@color/purple_500"/>
 
 
-</RelativeLayout>
+
+</LinearLayout>
