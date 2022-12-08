@@ -2,7 +2,9 @@ package NhomTTPTT.example.BaiTapCuoiKi.repository;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import NhomTTPTT.example.BaiTapCuoiKi.Movie;
+import NhomTTPTT.example.BaiTapCuoiKi.MovieSummary;
+import com.example.otpverification.R;
 import NhomTTPTT.example.BaiTapCuoiKi.Movie;
 
 public class Listfavorite {

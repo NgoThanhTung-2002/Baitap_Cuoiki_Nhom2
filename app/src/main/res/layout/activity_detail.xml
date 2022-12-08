@@ -95,6 +95,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1">
             <ImageView
+                android:id="@+id/imgShare"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/sentt"/>

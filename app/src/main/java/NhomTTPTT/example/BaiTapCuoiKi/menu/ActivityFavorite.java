@@ -21,6 +21,7 @@ import NhomTTPTT.example.BaiTapCuoiKi.repository.Listfavorite;
 
 public class ActivityFavorite extends AppCompatActivity {
     TextView txt;
+    TextView txtFavorite;
     ListView lv;
     AdapterMovie adapterMovie;
     @Override
@@ -28,11 +29,14 @@ public class ActivityFavorite extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favorite);
         txt = (TextView) findViewById(R.id.txtViewFavorite);
+        txtFavorite = (TextView) findViewById(R.id.txtFavorite);
         lv = (ListView) findViewById(R.id.lv_favorite);
 
         if(Listfavorite.movieArrayList.size()==0){
             lv.setVisibility(View.INVISIBLE);
+            txtFavorite.setVisibility(View.INVISIBLE);
         }else{
+            txtFavorite.setVisibility(View.VISIBLE);
             lv.setVisibility(View.VISIBLE);
             txt.setVisibility(View.INVISIBLE);
         }

@@ -27,6 +27,7 @@ import NhomTTPTT.example.BaiTapCuoiKi.repository.ListDowLoad;
 public class FragmentDowLoad extends Fragment {
     ImageView img;
     TextView txt;
+    TextView txtDowLoad;
     ListView lv;
     AdapterMovie adapterMovie;
     int vitri =-1;
@@ -36,10 +37,13 @@ public class FragmentDowLoad extends Fragment {
         View view = inflater.inflate(R.layout.activity_fragment_dowload, container, false);
         img = view.findViewById(R.id.imgEmpty);
         txt = view.findViewById(R.id.txt_empty);
+        txtDowLoad = view.findViewById(R.id.txtDowLoad);
         lv = view.findViewById(R.id.listviewDowLoad);
         if(ListDowLoad.movieArrayList.size()==0){
             lv.setVisibility(View.INVISIBLE);
+            txtDowLoad.setVisibility(View.INVISIBLE);
         }else{
+            txtDowLoad.setVisibility(View.VISIBLE);
             lv.setVisibility(View.VISIBLE);
             txt.setVisibility(View.INVISIBLE);
             img.setVisibility(View.INVISIBLE);

@@ -27,7 +27,7 @@ import NhomTTPTT.example.BaiTapCuoiKi.repository.Listfavorite;
 public class ActivityDetail extends AppCompatActivity {
     TextView txtNameMovie,txtSumary;
     ImageButton imgmp4;
-    ImageView imgDowLoad,imgFavorite;
+    ImageView imgDowLoad,imgFavorite,imgShare;
     VideoView vdView;
 
     private GridView gridView;
@@ -42,12 +42,23 @@ public class ActivityDetail extends AppCompatActivity {
         txtSumary =(TextView) findViewById(R.id.txt_Summary);
         imgmp4 =(ImageButton) findViewById(R.id.imgmp4);
         imgDowLoad =(ImageView) findViewById(R.id.imgDowLoad);
+        imgShare =(ImageView) findViewById(R.id.imgShare);
         imgFavorite =(ImageView) findViewById(R.id.imgYeuThich);
         vdView = (VideoView) findViewById(R.id.vd_ViDeoMP4);
 
         Intent intent =getIntent();
         txtNameMovie.setText(intent.getStringExtra("key1"));
         txtSumary.setText(intent.getStringExtra("key2"));
+        imgShare.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.setType("text/plain");
+                sendIntent.putExtra(Intent.EXTRA_TEXT,"Chia se ngay"+" :\n\n https://play.google.com/store/apps/details?id=com.netflix.mediaclient");
+                startActivity(Intent.createChooser(sendIntent,"Choose one"));
+            }
+        });
 
         imgmp4.setOnClickListener(new View.OnClickListener() {
             @Override

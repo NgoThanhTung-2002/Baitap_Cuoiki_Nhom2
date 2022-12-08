@@ -48,7 +48,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
         holder.txt_movieXuHuong.setText(category.getGameXuHuong());
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mContext,RecyclerView.HORIZONTAL,false);
         holder.rcv_movie.setLayoutManager(linearLayoutManager);
-        MovieAdapter nhacAdapter = new MovieAdapter();
+        MovieAdapter nhacAdapter = new MovieAdapter(category.getMovieList(),mContext);
         nhacAdapter.setData(category.getMovieList());
         holder.rcv_movie.setAdapter(nhacAdapter);
     }

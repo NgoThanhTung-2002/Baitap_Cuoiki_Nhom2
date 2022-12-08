@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
+    android:background="#CD000000"
     android:orientation="vertical"
     tools:context="NhomTTPTT.example.BaiTapCuoiKi.menu.ActivityShare">
     <EditText
@@ -23,10 +24,8 @@
         android:layout_marginTop="40dp"
         android:text="Chia sẻ ngay"
         android:layout_gravity="center"
+        android:textColor="@color/white"
         android:textStyle="bold"
         android:textSize="30dp"
         android:background="@color/purple_500"/>
-
-
-
 </LinearLayout>
